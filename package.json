@@ -1,0 +1,15 @@
+{
+  "name": "effibid",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "preinstall": "cd frontend && npm install && cd ../backend && npm install",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
